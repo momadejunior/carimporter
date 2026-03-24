@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Lista de Carros | Ferramenta Premium</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <span class="icon">🚗</span>
+                <h1>Lista de <span>Carros</span></h1>
+            </div>
+            <p class="subtitle">Crie rapidamente arquivos para importar seus veículos.</p>
+            <div class="instructions-card">
+                <p><strong>Como usar:</strong> Clique em "+ Adicionar Carro" para começar, preencha as informações e clique em "Baixar Excel" quando terminar. Use "Ver Exemplo" para ver como funciona!</p>
+            </div>
+        </header>
+
+        <main>
+            <div class="card toolbar">
+                <div class="toolbar-left">
+                    <button id="add-row-btn" class="btn secondary">
+                        <span class="icon">+</span> Adicionar Carro
+                    </button>
+                    <button id="sample-data-btn" class="btn outline">
+                        <span class="icon">🪄</span> Ver Exemplo
+                    </button>
+                    <button id="clear-all-btn" class="btn danger">
+                         Limpar Tudo
+                    </button>
+                </div>
+                <div class="toolbar-right">
+                    <button id="export-csv-btn" class="btn primary">
+                        <span class="icon">📄</span> Baixar CSV
+                    </button>
+                    <button id="export-xlsx-btn" class="btn primary sparkle">
+                        <span class="icon">📊</span> Baixar Excel
+                    </button>
+                </div>
+            </div>
+
+            <div class="card table-container">
+                <table id="data-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Título do Anúncio</th>
+                            <th>Marca</th>
+                            <th>Modelo</th>
+                            <th>Preço</th>
+                            <th>Ano</th>
+                            <th>Kms</th>
+                            <th>Motor</th>
+                            <th>Estado</th>
+                            <th>Tipo</th>
+                            <th>Fotos</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                        <!-- Rows will be added here -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Ferramenta de Importação de Automóveis</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
